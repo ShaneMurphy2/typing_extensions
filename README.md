@@ -181,6 +181,9 @@ Certain objects were changed after they were added to `typing`, and
   `isinstance()` checks against all these protocols were sped up significantly
   on Python 3.12. `typing_extensions` backports the faster versions to Python
   3.7+.
+- `NewType` has been in the `typing` module since Python 3.5.2, but
+  user-defined `NewType`s are only pickleable on Python 3.10+.
+  `typing_extensions.NewType` backports this feature to all Python versions.
 
 There are a few types whose interface was modified between different
 versions of typing. For example, `typing.Sequence` was modified to
